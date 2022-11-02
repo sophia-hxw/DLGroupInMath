@@ -7,7 +7,6 @@ for循环遍历整张图片，一个区域一个区域进行排查！
 检测人脸，左上角给定区域，扫描，向右移动区域
 """
 
-import numpy as np
 import cv2
 
 if __name__ == '__main__':
