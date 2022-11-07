@@ -1,6 +1,6 @@
 import cv2 #检测人脸
 
-faceCascade= cv2.CascadeClassifier("D:/pycharm/lab/haarcascade_frontalface_default.xml")
+faceCascade= cv2.CascadeClassifier("D:/opencv/haarcascade_frontalface_default.xml")
 img = cv2.imread('D:/pycharm/lab/zjz.jpg')
 imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
