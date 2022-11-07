@@ -1,0 +1,20 @@
+进入要管理的目录
+git init   初始化,让git 管理当前文件夹
+git status  当前目录下的文件状态
+红色：修改或新增的文件  （git add . ）
+绿色：已经管理未生成版本
+git add .
+git commit -m "v1"  生成版本
+git reset --hard +版本号 回滚上一个版本
+git reflog
+git reset --hard +版本号  回到最新把版本
+git checkout -- +文件名 让已修改文件回到原来状态
+git rest HEAD +文件名 让文件回到红色状态
+git branch 查看所处分支
+git branch +名称   新建分支
+git checkout +名称  切换到另一个分支  各个分支互不影响
+git merge +分支名称   合并分支 (先要切换到合并到的那个分支)
+git branch -d +分支名称  删除分支
+
+
+
