@@ -68,4 +68,4 @@ while True:  #读取轨迹栏值 以便应用在图像上
     imgStack = stackImages(0.6,([img,imgHSV],[mask,imgResult])) #把四张图拼起来
     cv2.imshow("Stacked Images",imgStack)
 
-    cv2.waitKey(1)
+    cv2.waitKey(0)
