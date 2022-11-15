@@ -17,7 +17,9 @@ def empty(i): #回调函数
 
     mask = cv2.inRange(hsv,lower,upper) #根据颜色空间阈值生成掩膜
     htich = np.hstack((imgResize, hsv))
+    #htich2 = np.hstack((imgResize,mask))
     cv2.imshow("merged", htich)
+    #cv2.imshow("merged", htich2)
     cv2.imshow("mask", mask)
 
 cv2.namedWindow("TrackBars") #窗口标题
@@ -31,6 +33,4 @@ cv2.createTrackbar("Val Min","TrackBars",9,255,empty) #明度最小值 #0，255
 cv2.createTrackbar("Val Max","TrackBars",178,255,empty) #255，255
 
 empty(0) #调用函数
-
-
 cv2.waitKey(0)
