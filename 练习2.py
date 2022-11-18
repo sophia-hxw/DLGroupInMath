@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 blank_image = np.zeros((400,532,3), np.uint8)
 blank_image.fill(255)
-img = cv2.imread('wulin.jpeg')
+img = cv2.imread('cat3.jpg')
 x1,y1 = img.shape[:2]
 print(img.shape)
 print(blank_image.shape)
@@ -23,8 +23,8 @@ elif x1<=400 and y1>532:
     img3 = cv2.resize(img,dim2)
     #print(img3.shape)
     x3,y3 = img3.shape[:2]
-    yoff3 = round((x0 - x3) // 2)
-    xoff3 = round((y0 - y3) // 2)
+    yoff3 = ((x0 - x3) // 2)
+    xoff3 = ((y0 - y3) // 2)
     result = blank_image.copy()
     result[yoff3:yoff3 + x3, xoff3:xoff3 + y3] = img3
 elif x1 > 400 and y1 > 532:
@@ -33,16 +33,16 @@ elif x1 > 400 and y1 > 532:
     img4 = cv2.resize(img, dim2)
     print(img4.shape)
     x4, y4 = img4.shape[:2]
-    yoff4 = round((x0 - x4) // 2)
-    xoff4 = round((y0 - y4) // 2)
+    yoff4 = ((x0 - x4) // 2)
+    xoff4 = ((y0 - y4) // 2)
     result = blank_image.copy()
     result[yoff4:yoff4 + x4, xoff4:xoff4 + y4] = img4
 else:
-    yoff1 = round((x0 - x1) / 2)
-    xoff1 = round((y0 - y1) / 2)
+    yoff1 = ((x0 - x1) / 2)
+    xoff1 = ((y0 - y1) / 2)
     result = blank_image.copy()
     result[yoff1:yoff1 + x1, xoff1:xoff1 + y1] = img
-#cv2.imshow('i', blank_image)
+cv2.imshow('i', blank_image)
 cv2.imshow('result',result)
-#cv2.imshow('img', img)
+cv2.imshow('img', img)
 cv2.waitKey(0)
