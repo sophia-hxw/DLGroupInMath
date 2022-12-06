@@ -20,6 +20,6 @@ z=iter(x)
 arr8 = np.fromiter(z,dtype='f')
 print(arr8)
 
-arr9 = np.linspace(1,10,10,dtype = 'i4'）  #等差数列
-arr10 = np.logspace(1.0,2.0,10）  #等比数列
+arr9 = np.linspace(1,10,10,dtype = 'i4')  #等差数列
+arr10 = np.logspace(1.0,2.0,10)  #等比数列
 
